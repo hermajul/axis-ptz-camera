@@ -177,6 +177,7 @@ class PTZ{
             if(posOld===posNew){
                 return true;
             }
+            posOld=posNew;
         }
         
     }
@@ -190,7 +191,7 @@ class Image{
     async snapshotJPEG(options){ //compresion
         var cmd = '/axis-cgi/jpg/image.cgi'+ '?camera=' + this.camera;
         Object.keys(options).forEach(function(k){
-            console.log(k + ' - ' + options[k]);
+            //console.log(k + ' - ' + options[k]);
             cmd = cmd + '&' + k + '='+options[k];
         });
         var raw = await request(cmd, this.options); 
@@ -255,13 +256,13 @@ function requestPTZ(cmd, options){
 }
 
 function request(cmd, options){
-    console.log(cmd)
+    //console.log(cmd)
     
     return new Promise(resolve => {
         options.path = cmd;
             https.get(options, (res) => {
                 try {  
-                    console.log(res.headers);
+                    //console.log(res.headers);
                     if(res.headers['www-authenticate']){
                         var challengeParams = parseDigest(res.headers['www-authenticate'])
                         ha1 = md5(options.username + ':' + challengeParams.realm + ':' + options.password)
