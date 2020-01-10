@@ -1,5 +1,5 @@
 # axis-ptz-camera
-nodejs client for axis network ptz functions
+nodejs client for axis network ptz functions using digest authentication
 
 ## Getting Started
 npm i axis-ptz-camera
@@ -31,7 +31,7 @@ axis.ptz.rpan('50').then(async (res)=>{
 })
 ```
 
-##API
+## API
 ```javascript
 // PTZ functions
 
