@@ -1,6 +1,6 @@
 {
   "name": "axis-ptz-camera",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "nodejs client for axis network ptz functions using digest authentication",
   "main": "",
   "scripts": {
