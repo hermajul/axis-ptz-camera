@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/hermajul/axis-ptz-camera.git"
   },
-  "keywords": [],
+  "keywords": ["axis","ptz","camera","network-camera","pant tilt zoom"],
   "author": "",
   "license": "ISC",
   "bugs": {
