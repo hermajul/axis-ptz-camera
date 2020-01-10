@@ -9,7 +9,7 @@ npm i axis-ptz-camera
 example for relative pan 50 degree
 ```javascript
 
-var Axis = require('Axis');
+var Axis = require('axis-ptz-camera');
 var axis = new Axis("host","username","password",{'camera'='1'});
 
 axis.ptz.rpan('50').then(async (res)=>{
